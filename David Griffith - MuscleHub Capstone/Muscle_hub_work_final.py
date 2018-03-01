@@ -126,20 +126,6 @@ results_test3 = chi2_contingency(test3)
 
 ## GRAPH TIME!!!
 
-# We'd like to make a bar chart for Janet that shows the difference between Group A
-# (people who were given the fitness test) and Group B (people who were not given the fitness test)
-# at each state of the process:
-# - Percent of visitors who apply
-# - Percent of applicants who purchase a membership
-# - Percent of visitors who purchase a membership
-#
-# Create one plot for **each** of the three sets of percentages that you calculated in `app_pivot`,
-# `member_pivot` and `final_member_pivot`.  Each plot should:
-# - Label the two bars as `Fitness Test` and `No Fitness Test`
-# - Make sure that the y-axis ticks are expressed as percents (i.e., `5%`)
-# - Have a title
-
-
 # test 1 bar
 plt.bar(range(len(app_pivot)), app_pivot['percentage'].values)
 plt.title('% Visit -> Application')
@@ -167,9 +153,3 @@ ax.set_xticklabels(['Fitness Test', 'No Fitness Test'])
 ax.set_yticks([0, 0.05, 0.10, 0.15, 0.20])
 ax.set_yticklabels(['0%', '5%', '10%', '15%', '20%'])
 plt.show()
-
-
-## so the story of the data is:
-## There is no area in which the fitness test performed significantly better than no fitness test
-## In addition we can see that overall significantly more visitors signed up for membership who didn't do the test
-## Conclusion kill the test people don't like it (interviews) and it does not have any quantative backing from the data
